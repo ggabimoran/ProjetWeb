@@ -11,17 +11,22 @@ class User
     /**
      * @var string
      */
-    private $firstname;
+    private $pseudo;
 
     /**
      * @var string
      */
-    private $lastname;
+    private $address;
 
     /**
-     * @var \DateTimeInterface
+     * @var int
      */
-    private $birthday;
+    private $city_id;
+
+    /**
+     * @var string
+     */
+    private $description;
 
     /**
      * @return int
@@ -44,71 +49,75 @@ class User
     /**
      * @return string
      */
-    public function getFirstname()
+    public function getPseudo()
     {
-        return $this->firstname;
+        return $this->pseudo;
     }
 
     /**
-     * @param string $firstname
+     * @param string $pseudo
      * @return User
      */
-    public function setFirstname($firstname)
+    public function setPseudo($pseudo)
     {
-        $this->firstname = $firstname;
+        $this->pseudo = $pseudo;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getLastname()
+    public function getAddress()
     {
-        return $this->lastname;
+        return $this->address;
     }
 
     /**
-     * @param string $lastname
+     * @param string $address
      * @return User
      */
-    public function setLastname($lastname)
+    public function setAddress($address)
     {
-        $this->lastname = $lastname;
+        $this->address = $address;
         return $this;
     }
-
-    /**
-     * @return \DateTimeInterface
-     */
-    public function getBirthday(): \DateTimeInterface
-    {
-        return $this->birthday;
-    }
-
-    /**
-     * @param \DateTimeInterface $birthday
-     * @return User
-     */
-    public function setBirthday(\DateTimeInterface $birthday)
-    {
-        $this->birthday = $birthday;
-        return $this;
-    }
-
 
     /**
      * @return int
-     * @throws \OutOfRangeException
      */
-    public function getAge(): int
+    public function getCityId()
     {
-        $now = new \DateTime();
-
-        if ($now < $this->getBirthday()) {
-            throw new \OutOfRangeException('Birthday in the future');
-        }
-
-        return $now->diff($this->getBirthday())->y;
+        return $this->city_id;
     }
+
+    /**
+     * @param int $city_id
+     * @return User
+     */
+    public function setCityId($city_id)
+    {
+        $this->city_id = $city_id;
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }  
+
+    /**
+     * @param string $description
+     * @return User
+     */
+    public function setDescription($description)
+    {
+        this->description = $description;
+        return $this;
+
+    } 
 }
 
