@@ -17,7 +17,7 @@ CREATE TABLE "city" (
 
 CREATE TABLE "planet" (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR NOT NULL,
+	name VARCHAR NOT NULL
 );
 
 /************
@@ -28,7 +28,8 @@ CREATE TABLE "product" (
 	seller_id INTEGER NOT NULL,
 	name VARCHAR NOT NULL,
 	description TEXT,
-	on_sale BOOLEAN DEFAULT TRUE
+	price FLOAT,
+	number INTEGER
 );
 
 CREATE TABLE "image" (
@@ -43,14 +44,29 @@ CREATE TABLE "category" (
 	super_category VARCHAR 
 );
 
-
+CREATE TABLE "delivery_system" (
+	id SERIAL PRIMARY KEY,
+	description TEXT,
+	price FLOAT NOT NULL
+);
 
 /* Jointures */
 CREATE TABLE "product_category" (
-	category_name VARCHAR,
 	product_id INTEGER,
-	PRIMARY KEY(category_name, product_id)
+	category_name VARCHAR,
+	PRIMARY KEY(product_id, category_name)
 );
 
 CREATE TABLE "product_image" (
+	product_id INTEGER,
+	image_id INTEGER,
+	PRIMARY KEY(product_id, image_id)
+);
 
+CREATE TABLE "purchase" (
+	product_id INTEGER,
+	buyer_id INTEGER,
+	pdate DATE,
+	delivery_system_id INTEGER,
+	PRIMARY KEY(product_id, buyer_id, pdate);
+);
