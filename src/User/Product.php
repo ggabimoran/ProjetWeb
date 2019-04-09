@@ -1,7 +1,7 @@
 <?php
-namespace User;
+namespace Product;
 
-class User
+class Product
 {
     /**
      * @var int

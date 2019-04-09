@@ -1,7 +1,7 @@
 <?php
-namespace City;
+namespace Planet;
 
-class City
+class Planet
 {
     /**
      * @var int

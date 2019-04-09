@@ -28,6 +28,7 @@ class User
      */
     private $description;
 
+    private $passeword;
     /**
      * @return int
      */
@@ -119,5 +120,16 @@ class User
         return $this;
 
     } 
+
+    public function getPasseword()
+    {
+        return $this->passeword;
+    }
+
+    public function setPasseword($passeword)
+    {
+        this->passeword = $passeword;
+        return this;
+    }
 }
 
