@@ -7,7 +7,7 @@ function enTete($titre)
     print "  <head>\n";
     print "    <meta charset=\"utf-8\" />\n";
     print "    <title>$titre</title>\n";
-    print "    <link rel=\"stylesheet\" href=\"Style.css\"/>\n";
+    print "    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">";
     print "  </head>\n";
   
     print "  <body>\n";
@@ -17,8 +17,6 @@ function enTete($titre)
 function pied(
     echo "</body>";
     echo "</html>";
-/* Compléter cette fonction afin qu'elle ferme les balises body et html */
-
 }
 
 
