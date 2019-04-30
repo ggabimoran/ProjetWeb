@@ -1,5 +1,6 @@
 <?php
 require '../vendor/autoload.php';
+include 'Vue.php';
 
 //postgres
 $dbName = getenv('DB_NAME');
@@ -9,28 +10,29 @@ $connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=
 
 $userRepository = new \User\UserRepository($connection);
 $users = $userRepository->fetchAll();
+enTete('Bienvenue sur le site intergalactique de gré à gré!');
 ?>
 
-<div class="container">
-    <h3><?php echo 'Hello world from Docker! php' . PHP_VERSION; ?></h3>
-
+    <div class="container">
     <table class="table table-bordered table-hover table-striped">
         <thead style="font-weight: bold">
-            <td>#</td>
-            <td>Firstname</td>
-            <td>Lastname</td>
-            <td>Age</td>
+            <td>CityId</td>
+            <td>Pseudo</td>
+            <td>Adress</td>
         </thead>
         <?php /** @var \User\User $user */
         foreach ($users as $user) : ?>
             <tr>
-                <td><?php echo $user->getId() ?></td>
-                <td><?php echo $user->getFirstname() ?></td>
-                <td><?php echo $user->getLastname() ?></td>
-                <td><?php echo $user->getAge() ?> years</td>
+	        <td><?php echo $user->getCityId() ?></td>
+                <td><?php echo $user->getPseudo() ?></td>
+                <td><?php echo $user->getAdress() ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
 </div>
-</body>
-</html>
+<footer>
+	<p>Informations complémentaires :</p>
+</footer>
+<?php
+pied();
+?>

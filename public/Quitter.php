@@ -1,8 +1,7 @@
 <?php
-include("tpModele.php");
-include("tpVue.php");
+include("Vue.php");
 
-detruire_session();
+session_destroy();
 affiche_info("Et maintenant <br/>Au revoir");
 retour_menu();
 
