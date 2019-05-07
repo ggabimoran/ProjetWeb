@@ -81,7 +81,29 @@ INSERT INTO "user" VALUES
 INSERT INTO "city" VALUES
 (1, "Evry", 1),
 (2, "Paris", 1),
-(3, "Province", 1);
+(3, "Alger", 2),
+(4, "Amsterdam", 2),
+(5, "Bamako", 11),
+(6, "Bangui", 11),
+(7, "Beijing", 12),
+(8, "Berlin", 9),
+(9, "Brasilia", 9),
+(10, "Bruxelles", 8),
+(11, "Budapest", 5),
+(12, "Buenos Aires", 12),
+(13, "Guatemala", 6),
+(14, "Helsinki", 2),
+(15, "Jakarta", 4),
+(16, "La Havane", 5),
+(17, "Luxembourg", 8),
+(18, "Madrid", 4),
+(19, "Monaco", 6),
+(20, "Moskva", 4),
+(21, "Santiago", 3),
+(22, "Sarajevo", 5),
+(23, "Stockholm", 11),
+(24, "Tokyo", 10),
+(25, "Tunis", 10);
 
 INSERT INTO "planet" VALUES
 (1, "Terre"),
