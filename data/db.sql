@@ -75,7 +75,7 @@ CREATE TABLE "purchase" (
 
 
 INSERT INTO "user" VALUES
-(1, "Toto", "Toto", "30 Ruelle du Pingouin", "1", "First"),
+(1, "Toto", "mdp", "30 Ruelle du Pingouin", "1", "First"),
 (2, "Jean-Eude", "Argent", "5 Faubourg de la Cathédrale", "2", "Je suis riche");
 
 INSERT INTO "city" VALUES
@@ -85,8 +85,18 @@ INSERT INTO "city" VALUES
 
 INSERT INTO "planet" VALUES
 (1, "Terre"),
-(2, "Mars"),
-(3 "KinderBueno");
+(2, "Mercure"),
+(3, "Vénus"),
+(4, "Mars"),
+(5, "Jupiter"),
+(6, "Saturne"),
+(7, "Uranus"),
+(8, "Netpune"),
+(9, "Céres"),
+(10, "Pluton"),
+(11, "Hauméa"),
+(12, "Makémaké"),
+(13, "Eris");
 
 INSERT INTO "product" VALUES
 (1, 2, "Tarte", "Le sucre c'est bon", 3.14, 10),
