@@ -1,4 +1,14 @@
-CREATE OR REPLACE TABLE "user" (
+DROP TABLE IF EXISTS"user";
+DROP TABLE IF EXISTS"city";
+DROP TABLE IF EXISTS"planet";
+DROP TABLE IF EXISTS"product";
+DROP TABLE IF EXISTS"image";
+DROP TABLE IF EXISTS"category";
+DROP TABLE IF EXISTS"product_category";
+DROP TABLE IF EXISTS"product_image";
+DROP TABLE IF EXISTS"purchase";
+
+CREATE TABLE "user" (
 	id SERIAL PRIMARY KEY,
 	pseudo VARCHAR UNIQUE,
 	password VARCHAR NOT NULL,
@@ -49,7 +59,7 @@ CREATE TABLE "delivery_system" (
 	id SERIAL PRIMARY KEY,
 	description TEXT,
 	price FLOAT NOT NULL
-)	
+);	
 
 /* Jointures */
 CREATE TABLE "product_category" (
@@ -69,12 +79,12 @@ CREATE TABLE "purchase" (
 	buyer_id INTEGER,
 	pdate DATE,
 	delivery_system_id INTEGER,
-	PRIMARY KEY(product_id, buyer_id, pdate);
+	PRIMARY KEY(product_id, buyer_id, pdate)
 );
 
 
 
-INSERT INTO "user" VALUES
+INSERT INTO "user" (id,pseudo,password,address,city_id,description) VALUES
 (1, "Toto", "mdp", "30 Ruelle du Pingouin", "1", "First"),
 (2, "Jean-Eude", "Argent", "5 Faubourg de la Cathédrale", "2", "Je suis riche");
 
