@@ -13,7 +13,14 @@ enTete("Vérification du mot de passe");
  
   S'il est bon, rediriger vers la page index.php
 */
-
+if(checkPassword($psd, $mdp)) {
+	//config();
+	header('Location: index.php');
+}
+else {
+	affiche_erreur("Le mot de passe entré est eronné.");
+    affiche_info('Veuillez-essayer de nouveau <a href="tpConnexion.php">ici</a>.');
+}
 
 
 
