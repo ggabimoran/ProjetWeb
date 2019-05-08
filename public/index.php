@@ -33,6 +33,7 @@ enTete('Bienvenue sur le site intergalactique de gré à gré!');
 
 <nav>
     <a href="Connexion.php">Connexion</a>
+    <a href="Accueil.php">Accueil</a>
 </nav>
 
 <footer>
