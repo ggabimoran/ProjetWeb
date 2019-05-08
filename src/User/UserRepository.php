@@ -23,10 +23,7 @@ class UserRepository
         foreach ($rows as $row) {
             $user = new User();
             $user
-                ->setId($row->id)
-                ->setFirstname($row->firstname)
-                ->setLastname($row->lastname)
-                ->setBirthday(new \DateTimeImmutable($row->birthday));
+                ->setId($row->id);
 
             $users[] = $user;
         }

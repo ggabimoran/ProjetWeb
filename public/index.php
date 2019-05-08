@@ -25,7 +25,7 @@ enTete('Bienvenue sur le site intergalactique de gré à gré!');
             <tr>
 	        <td><?php echo $user->getCityId() ?></td>
                 <td><?php echo $user->getPseudo() ?></td>
-                <td><?php echo $user->getAdress() ?></td>
+                <td><?php echo $user->getAddress() ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
