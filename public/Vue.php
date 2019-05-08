@@ -34,10 +34,11 @@ function affiche_erreur($str) {
 function retour_menu() 
 { 
         $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	if ($actual_link != "http://$_SERVER[HTTP_HOST]index.php"){
+	if ($actual_link != "http://localhost:8080/index.php"){
 	echo '<a href="index.php">Menu</a>';
-	}
-	if ($actual_link != "http://$_SERVER[HTTP_HOST]Quitter.php"){
+    }
+    echo '<p></p>';
+	if ($actual_link != "http://localhost:8080/Quitter.php"){
 	echo '<a href="Quitter.php">Déconnexion</a>';
 	}
 }
@@ -67,7 +68,7 @@ function vue_lieu() {
 
         <br/>
 
-        <form action="LocationRedirect.php" method="post">
+        <form action="Annonces.php" method="post">
 	    <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
             <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
             <input type="submit" value="Valider"/>
