@@ -58,3 +58,32 @@ function vue_connexion() {
         </section>';
 
 }
+
+function vue_lieu() {
+
+    echo '<section>
+        <p> Bonjour, bienvenue sur l\'application de gestion des transactions intergalactiques de gré à gré.
+        Commencez par indiquer votre lieu </p>
+
+        <br/>
+
+        <form action="LocationRedirect.php" method="post">
+	    <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
+            <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
+            <input type="submit" value="Valider"/>
+        </form>
+        </section>';
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
