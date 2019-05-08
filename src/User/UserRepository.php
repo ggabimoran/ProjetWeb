@@ -23,8 +23,13 @@ class UserRepository
         foreach ($rows as $row) {
             $user = new User();
             $user
-                ->setId($row->id);
-
+                ->setId($row->id)
+                ->setPseudo($row->pseudo)
+                ->setPassword($row->password)  
+                ->setAddress($row->address)
+                ->setCityId($row->city_id)
+                ->setDescription($row->description);
+                
             $users[] = $user;
         }
 

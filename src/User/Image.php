@@ -1,7 +1,7 @@
 <?php
-namespace User;
+namespace Image;
 
-class User
+class Image
 {
     /**
      * @var int
@@ -28,7 +28,6 @@ class User
      */
     private $description;
 
-    private $passeword;
     /**
      * @return int
      */
@@ -116,20 +115,9 @@ class User
      */
     public function setDescription($description)
     {
-        $this->description = $description;
+        this->description = $description;
         return $this;
 
     } 
-
-    public function getPasseword()
-    {
-        return $this->passeword;
-    }
-
-    public function setPasseword($passeword)
-    {
-        $this->passeword = $passeword;
-        return this;
-    }
 }
 
