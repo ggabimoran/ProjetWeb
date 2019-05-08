@@ -1,10 +1,17 @@
 <?php
 include("Vue.php");
-include("../src/User/ProductRepository.php")
+include("../src/User/ProductRepository.php");
+include("../src/User/Product.php");
+
 $planet = $_POST['plt'];
 $city = $_POST['cty'];
 
-$productRepository = new \ProductRepository($connection);
+$dbName = getenv('DB_NAME');
+$dbUser = getenv('DB_USER');
+$dbPassword = getenv('DB_PASSWORD');
+$connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=$dbPassword");
+
+$productRepository = new \User\ProductRepository($connection);
 $products = $productRepository->fetchAll();
 enTete("Annonces dans la ville $city de la planète $planet");
 
