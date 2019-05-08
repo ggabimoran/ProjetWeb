@@ -85,7 +85,7 @@ CREATE TABLE "purchase" (
 
 
 INSERT INTO "user" (id,pseudo,password,address,city_id,description) VALUES
-(1, "Toto", "mdp", "30 Ruelle du Pingouin", "1", "First"),
+(1, 'Toto', 'mdp', "30 Ruelle du Pingouin", "1", "First"),
 (2, "Jean-Eude", "Argent", "5 Faubourg de la Cathédrale", "2", "Je suis riche");
 
 INSERT INTO "city" VALUES
