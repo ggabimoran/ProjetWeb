@@ -33,11 +33,7 @@ class User
     /**
      * @return int
      */
-    public function __construct($pseudo)
-    {
-        $this->pseudo = $pseudo;
-    }
-
+    
     public function getId()
     {
         return $this->id;

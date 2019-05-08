@@ -6,17 +6,7 @@ include("../src/User/UserRepository.php");
 
 $psd = $_POST['psd']; //pseudo 
 $mdp = $_POST['mdp']; //mot de passe
-
-enTete("Vérification du mot de passe");
-
-/*
-  Si le mot de passe entré est vide ou faux (cf. fonction verif_mdp), afficher une erreur et un lien vers tpConnexion.php
- 
-  S'il est bon, rediriger vers la page index.php
-*/
-  //$user = new \User\User($psd);
-
-  $dbName = getenv('DB_NAME');
+$dbName = getenv('DB_NAME');
   $dbUser = getenv('DB_USER');
   $dbPassword = getenv('DB_PASSWORD');
   $connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=$dbPassword");
@@ -24,14 +14,21 @@ enTete("Vérification du mot de passe");
 
   $password = $userRepository->getPassword($psd);  
   if($password == $mdp) {
-	//config();
-  	echo'<meta http-equiv="Location" content="Connexion.php">';
-  	exit();
+  	header('Location: index.php');
   }
-  else {
+enTete('Vérification du mot de passe');
+/*
+  Si le mot de passe entré est vide ou faux (cf. fonction verif_mdp), afficher une erreur et un lien vers tpConnexion.php
+ 
+  S'il est bon, rediriger vers la page index.php
+*/
+  //$user = new \User\User($psd);
+
+ 
+  
   	affiche_erreur("Le mot de passe entré est eronné.");
   	affiche_info('Veuillez-essayer de nouveau <a href="Connexion.php">ici</a>.');
-  }
+ 
 
 
 

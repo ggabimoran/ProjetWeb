@@ -39,7 +39,7 @@ class UserRepository
     public function getPassword($pseudo){
         $rows = $this->connection->query('SELECT * FROM "user"')->fetchAll(\PDO::FETCH_OBJ);
         foreach ($rows as $row){
-            if($row->pseudo == "Jean-Eude")
+            if($row->pseudo == $pseudo)
             return $row->password;
         }
     }
