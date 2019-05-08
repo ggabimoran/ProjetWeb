@@ -1,23 +1,23 @@
 <?php
 namespace User;
 
-class Planet
+class ProductImage
 {
     /**
      * @var int
      */
-    private $id;
+    private $product_id;
 
     /**
      * @var string
      */
-    private $name;
+    private $image_id;
 
+    
     /**
-     * @var string
+     * @return int
      */
-
-    public function getId()
+    public function getProductId()
     {
         return $this->id;
     }
@@ -26,28 +26,29 @@ class Planet
      * @param int $id
      * @return User
      */
-    public function setId($id)
+    public function setProductId($product_id)
     {
-        $this->id = $id;
+        $this->product_id = $product_id;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
+    public function getIMageId()
     {
-        return $this->getName;
+        return $this->iamge_id;
     }
 
     /**
      * @param string $pseudo
      * @return User
      */
-    public function setName($name)
+    public function setImageId($image_id)
     {
-        $this->name = $name;
+        $this->image_id = $image_id;
         return $this;
     }
-}
+
     
+

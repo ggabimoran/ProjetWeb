@@ -1,7 +1,7 @@
 <?php
 namespace User;
 
-class imageRepository
+class ImageRepository
 {
     /**
      * @var \PDO
@@ -26,7 +26,7 @@ class imageRepository
             $image
                 ->setId($row->id)
                 ->setDescription($row->description)
-                ->setDatas($row->datas)
+                ->setDatas($row->datas);
                 
             $images[] = $image;
         }

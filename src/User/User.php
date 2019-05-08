@@ -28,7 +28,7 @@ class User
      */
     private $description;
 
-    private $passeword;
+    private $password;
     /**
      * @return int
      */
@@ -121,20 +121,20 @@ class User
 
     } 
 
-    public function getPasseword()
+    public function getPassword()
     {
-        return $this->passeword;
+        return $this->password;
     }
 
-    public function setPasseword($passeword)
+    public function setPassword($password)
     {
-        $this->passeword = $passeword;
-        return this;
+        $this->password = $password;
+        return $this;
     }
 
-    public function checkPasseword($passeword)
+    public function checkPassword($password)
     {
-        return ($this->passeword == $passeword);
+        return ($this->password == $password);
     }
 }
 

@@ -1,5 +1,5 @@
 <?php
-namespace City;
+namespace User;
 
 class City
 {

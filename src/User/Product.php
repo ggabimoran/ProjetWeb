@@ -1,5 +1,5 @@
 <?php
-namespace Product;
+namespace User;
 
 class Product
 {

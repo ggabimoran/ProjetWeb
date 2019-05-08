@@ -1,6 +1,7 @@
 <?php
 namespace User;
-class UserRepository
+
+class CityRepository
 {
     /**
      * @var \PDO
@@ -25,7 +26,7 @@ class UserRepository
             $city
                 ->setId($row->id)
                 ->setName($row->name)
-                ->setPlanetId($row->planet_id)
+                ->setPlanetId($row->planet_id);
                 
             $citys[] = $city;
         }

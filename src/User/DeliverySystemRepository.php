@@ -1,7 +1,7 @@
 <?php
 namespace User;
 
-class CategoryRepository
+class DeliverySystemRepository
 {
     /**
      * @var \PDO
@@ -19,19 +19,19 @@ class CategoryRepository
 
     public function fetchAll()
     {
-        $rows = $this->connection->query('SELECT * FROM "category"')->fetchAll(\PDO::FETCH_OBJ);
-        $categorys = [];
+        $rows = $this->connection->query('SELECT * FROM "delivery_system"')->fetchAll(\PDO::FETCH_OBJ);
+        $deliverySystems = [];
         foreach ($rows as $row) {
-            $category = new Category();
-            $category
+            $deliverySystem = new DeliverySystem();
+            $deliverySystem
                 ->setId($row->id)
                 ->setDescription($row->description)
-                ->setSuperCategory($row->super_category);
+                ->setPrice($row->price);
                 
-            $categorys[] = $category;
+            $deliverySystems[] = $deliverySystem;
         }
 
-        return $categorys;
+        return $deliverySystems;
     }
 
 

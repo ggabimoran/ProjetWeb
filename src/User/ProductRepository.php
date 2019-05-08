@@ -1,6 +1,7 @@
 <?php
-namespace product;
-class productRepository
+namespace User;
+
+class ProductRepository
 {
     /**
      * @var \PDO

@@ -1,5 +1,5 @@
 <?php
-namespace Category;
+namespace User;
 
 class Category
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Image;
+namespace User;
 
-class Image
+class DeliverySystem
 {
     /**
      * @var int

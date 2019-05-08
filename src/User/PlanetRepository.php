@@ -1,5 +1,6 @@
 <?php
 namespace User;
+
 class PlanetRepository
 {
     /**
@@ -24,7 +25,7 @@ class PlanetRepository
             $planet = new Planet();
             $planet
                 ->setId($row->id)
-                ->setName($row->name)
+                ->setName($row->name);
                 
             $planets[] = $planet;
         }

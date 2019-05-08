@@ -1,23 +1,23 @@
 <?php
 namespace User;
 
-class Planet
+class ProductCategory
 {
     /**
      * @var int
      */
-    private $id;
+    private $product_id;
 
     /**
      * @var string
      */
-    private $name;
+    private $category_name;
 
+    
     /**
-     * @var string
+     * @return int
      */
-
-    public function getId()
+    public function getProductId()
     {
         return $this->id;
     }
@@ -26,28 +26,29 @@ class Planet
      * @param int $id
      * @return User
      */
-    public function setId($id)
+    public function setProductId($product_id)
     {
-        $this->id = $id;
+        $this->product_id = $product_id;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
+    public function getCategoryName()
     {
-        return $this->getName;
+        return $this->category_name;
     }
 
     /**
      * @param string $pseudo
      * @return User
      */
-    public function setName($name)
+    public function setCategoryName($category_name)
     {
-        $this->name = $name;
+        $this->category_name = $category_name;
         return $this;
     }
-}
+
     
+

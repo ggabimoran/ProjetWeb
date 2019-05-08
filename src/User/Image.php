@@ -1,5 +1,5 @@
 <?php
-namespace Image;
+namespace User;
 
 class Image
 {
