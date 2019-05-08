@@ -1,5 +1,6 @@
 <?php
 namespace User;
+require '../vendor/autoload.php';
 
 class User
 {
@@ -32,6 +33,11 @@ class User
     /**
      * @return int
      */
+    public function __construct($pseudo)
+    {
+        $this->pseudo = $pseudo;
+    }
+
     public function getId()
     {
         return $this->id;
@@ -123,7 +129,13 @@ class User
 
     public function getPassword()
     {
-        return $this->password;
+        /*$dbUser = getenv('DB_USER');
+        $dbPassword = getenv('DB_PASSWORD');
+        $connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=$dbPassword");
+        $userRepository = new \User\UserRepository($connection);
+
+        $this->password = $userRepository->getPassword($pseudo, $password);*/
+        return $password;
     }
 
     public function setPassword($password)
@@ -132,9 +144,5 @@ class User
         return $this;
     }
 
-    public function checkPassword($password)
-    {
-        return ($this->password == $password);
-    }
 }
 

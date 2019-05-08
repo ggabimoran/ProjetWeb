@@ -36,5 +36,12 @@ class UserRepository
         return $users;
     }
 
+    public function getPassword($pseudo){
+        $rows = $this->connection->query('SELECT * FROM "user"')->fetchAll(\PDO::FETCH_OBJ);
+        foreach ($rows as $row){
+            if($row->pseudo == "Jean-Eude")
+            return $row->password;
+        }
+    }
 
 }
