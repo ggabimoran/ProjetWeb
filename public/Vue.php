@@ -68,7 +68,7 @@ function vue_lieu() {
 
         <br/>
 
-        <form action="LocationRedirect.php" method="post">
+        <form action="Annonces.php" method="post">
 	    <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
             <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
             <input type="submit" value="Valider"/>
