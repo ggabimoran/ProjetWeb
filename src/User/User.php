@@ -131,5 +131,10 @@ class User
         $this->passeword = $passeword;
         return this;
     }
+
+    public function checkPasseword($passeword)
+    {
+        return ($this->passeword == $passeword);
+    }
 }
 
