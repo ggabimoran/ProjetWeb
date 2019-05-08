@@ -15,7 +15,7 @@ CREATE TABLE "user" (
 	pseudo VARCHAR UNIQUE,
 	password VARCHAR NOT NULL,
 	address VARCHAR NOT NULL,
-	city_id INTEGER NOT NULL,
+	city_id INTEGER NOT NULL REFERENCES city(id),
 	description TEXT
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE "user" (
 CREATE TABLE "city" (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR NOT NULL,
-	planet_id INTEGER NOT NULL
+	planet_id INTEGER NOT NULL REFERENCES planet(id)
 );
 
 CREATE TABLE "planet" (
@@ -38,7 +38,7 @@ CREATE TABLE "planet" (
  ************/
 CREATE TABLE "product" (
 	id SERIAL PRIMARY KEY,
-	seller_id INTEGER NOT NULL,
+	seller_id INTEGER NOT NULL REFERENCES user(id),
 	name VARCHAR NOT NULL,
 	description TEXT,
 	price FLOAT,
@@ -48,13 +48,13 @@ CREATE TABLE "product" (
 CREATE TABLE "image" (
 	id SERIAL PRIMARY KEY,
 	description TEXT,
-	datas BYTEA NOT NULL
+	path VARCHAR NOT NULL
 );
 
 CREATE TABLE "category" (
 	name VARCHAR PRIMARY KEY,
 	description TEXT,
-	super_category VARCHAR 
+	super_category VARCHAR REFERENCES category(name)
 );
 
 CREATE TABLE "delivery_system" (
@@ -65,22 +65,22 @@ CREATE TABLE "delivery_system" (
 
 /* Jointures */
 CREATE TABLE "product_category" (
-	product_id INTEGER,
-	category_name VARCHAR,
+	product_id INTEGER REFERENCES product(id),
+	category_name VARCHAR REFERENCES category(name),
 	PRIMARY KEY(product_id, category_name)
 );
 
 CREATE TABLE "product_image" (
-	product_id INTEGER,
-	image_id INTEGER,
+	product_id INTEGER REFERENCES product(id),
+	image_id INTEGER REFERENCES image(id),
 	PRIMARY KEY(product_id, image_id)
 );
 
 CREATE TABLE "purchase" (
-	product_id INTEGER,
-	buyer_id INTEGER,
+	product_id INTEGER REFERENCES product(id),
+	buyer_id INTEGER REFERENCES user(id),
 	pdate DATE,
-	delivery_system_id INTEGER,
+	delivery_system_id INTEGER REFERENCES delivery_system(id),
 	PRIMARY KEY(product_id, buyer_id, pdate)
 );
 
