@@ -8,26 +8,9 @@ class Image
      */
     private $id;
 
-    /**
-     * @var string
-     */
-    private $pseudo;
-
-    /**
-     * @var string
-     */
-    private $address;
-
-    /**
-     * @var int
-     */
-    private $city_id;
-
-    /**
-     * @var string
-     */
     private $description;
 
+    private $datas;
     /**
      * @return int
      */
@@ -46,57 +29,23 @@ class Image
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * @param string $pseudo
-     * @return User
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @param string $address
-     * @return User
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-        return $this;
-    }
+    
 
     /**
      * @return int
      */
-    public function getCityId()
+    public function getDatas()
     {
-        return $this->city_id;
+        return $this->datas;
     }
 
     /**
      * @param int $city_id
      * @return User
      */
-    public function setCityId($city_id)
+    public function setDatas($datas)
     {
-        $this->city_id = $city_id;
+        $this->datas = $datas;
         return $this;
     }
 
@@ -115,7 +64,7 @@ class Image
      */
     public function setDescription($description)
     {
-        this->description = $description;
+        $this->description = $description;
         return $this;
 
     } 

@@ -16,11 +16,6 @@ class Product
     /**
      * @var int
      */
-    private $on_sale;
-
-    /**
-     * @var int
-     */
     private $seller_id;
 
     /**
@@ -29,8 +24,12 @@ class Product
     private $description;
 
     /**
-     * @return int
+     * @return float
      */
+    private $price;
+
+    private $number;
+
     public function getId()
     {
         return $this->id;
@@ -85,21 +84,11 @@ class Product
     /**
      * @return int
      */
-    public function getOnSale()
-    {
-        return $this->on_sale;
-    }
 
     /**
      * @param int $city_id
      * @return User
      */
-    public function setCityId($on_sale)
-    {
-        $this->on_sale = $on_sale;
-        return $this;
-    }
-
 
     /**
      * @return string
@@ -115,9 +104,34 @@ class Product
      */
     public function setDescription($description)
     {
-        this->description = $description;
+        $this->description = $description;
         return $this;
 
     } 
+
+
+    public function getPrice()
+    {
+        return $this->price;
+    } 
+
+    public function setPrice($price)
+    {
+        $this->price = $price;
+        return $this;
+
+    }
+
+    public function getNumber()
+    {
+        return $this->number;
+    } 
+
+    public function setNumber($number)
+    {
+        $this->number = $number;
+        return $this;
+
+    }
 }
 

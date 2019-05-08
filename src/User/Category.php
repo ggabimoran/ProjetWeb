@@ -1,33 +1,16 @@
 <?php
-namespace User;
+namespace Category;
 
-class User
+class Category
 {
     /**
      * @var int
      */
     private $id;
 
-    /**
-     * @var string
-     */
-    private $pseudo;
-
-    /**
-     * @var string
-     */
-    private $address;
-
-    /**
-     * @var int
-     */
-    private $city_id;
-
-    /**
-     * @var string
-     */
     private $description;
 
+    private $super_category;
     /**
      * @return int
      */
@@ -46,57 +29,23 @@ class User
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * @param string $pseudo
-     * @return User
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @param string $address
-     * @return User
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-        return $this;
-    }
+    
 
     /**
      * @return int
      */
-    public function getCityId()
+    public function getSuperCategory()
     {
-        return $this->city_id;
+        return $this->super_category;
     }
 
     /**
      * @param int $city_id
      * @return User
      */
-    public function setCityId($city_id)
+    public function setSuperCategory($super_category)
     {
-        $this->city_id = $city_id;
+        $this->datas = $super_category;
         return $this;
     }
 
@@ -115,7 +64,7 @@ class User
      */
     public function setDescription($description)
     {
-        this->description = $description;
+        $this->description = $description;
         return $this;
 
     } 
