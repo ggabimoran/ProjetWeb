@@ -7,6 +7,8 @@ DROP TABLE IF EXISTS"category";
 DROP TABLE IF EXISTS"product_category";
 DROP TABLE IF EXISTS"product_image";
 DROP TABLE IF EXISTS"purchase";
+DROP TABLE IF EXISTS"delivery_system";
+
 
 CREATE TABLE "user" (
 	id SERIAL PRIMARY KEY,
@@ -85,62 +87,62 @@ CREATE TABLE "purchase" (
 
 
 INSERT INTO "user" (id,pseudo,password,address,city_id,description) VALUES
-(1, 'Toto', 'mdp', "30 Ruelle du Pingouin", "1", "First"),
-(2, "Jean-Eude", "Argent", "5 Faubourg de la Cathédrale", "2", "Je suis riche");
+(1, 'Toto', 'mdp', '30 Ruelle du Pingouin', '1', 'First'),
+(2, 'Jean-Eude', 'Argent', '5 Faubourg de la Cathédrale', '2', 'Je suis riche');
 
 INSERT INTO "city" VALUES
-(1, "Evry", 1),
-(2, "Paris", 1),
-(3, "Alger", 2),
-(4, "Amsterdam", 2),
-(5, "Bamako", 11),
-(6, "Bangui", 11),
-(7, "Beijing", 12),
-(8, "Berlin", 9),
-(9, "Brasilia", 9),
-(10, "Bruxelles", 8),
-(11, "Budapest", 5),
-(12, "Buenos Aires", 12),
-(13, "Guatemala", 6),
-(14, "Helsinki", 2),
-(15, "Jakarta", 4),
-(16, "La Havane", 5),
-(17, "Luxembourg", 8),
-(18, "Madrid", 4),
-(19, "Monaco", 6),
-(20, "Moskva", 4),
-(21, "Santiago", 3),
-(22, "Sarajevo", 5),
-(23, "Stockholm", 11),
-(24, "Tokyo", 10),
-(25, "Tunis", 10);
+(1, 'Evry', 1),
+(2, 'Paris', 1),
+(3, 'Alger', 2),
+(4, 'Amsterdam', 2),
+(5, 'Bamako', 11),
+(6, 'Bangui', 11),
+(7, 'Beijing', 12),
+(8, 'Berlin', 9),
+(9, 'Brasilia', 9),
+(10, 'Bruxelles', 8),
+(11, 'Budapest', 5),
+(12, 'Buenos Aires', 12),
+(13, 'Guatemala', 6),
+(14, 'Helsinki', 2),
+(15, 'Jakarta', 4),
+(16, 'La Havane', 5),
+(17, 'Luxembourg', 8),
+(18, 'Madrid', 4),
+(19, 'Monaco', 6),
+(20, 'Moskva', 4),
+(21, 'Santiago', 3),
+(22, 'Sarajevo', 5),
+(23, 'Stockholm', 11),
+(24, 'Tokyo', 10),
+(25, 'Tunis', 10);
 
 INSERT INTO "planet" VALUES
-(1, "Terre"),
-(2, "Mercure"),
-(3, "Vénus"),
-(4, "Mars"),
-(5, "Jupiter"),
-(6, "Saturne"),
-(7, "Uranus"),
-(8, "Netpune"),
-(9, "Céres"),
-(10, "Pluton"),
-(11, "Hauméa"),
-(12, "Makémaké"),
-(13, "Eris");
+(1, 'Terre'),
+(2, 'Mercure'),
+(3, 'Vénus'),
+(4, 'Mars'),
+(5, 'Jupiter'),
+(6, 'Saturne'),
+(7, 'Uranus'),
+(8, 'Netpune'),
+(9, 'Céres'),
+(10, 'Pluton'),
+(11, 'Hauméa'),
+(12, 'Makémaké'),
+(13, 'Eris');
 
 INSERT INTO "product" VALUES
-(1, 2, "Tarte", "Le sucre c'est bon", 3.14, 10),
-(2, 1, "Pelle", "Ca creuse bien!", 10, 1);
+(1, 2, 'Tarte', 'On aime le sucre', 3.14, 10),
+(2, 1, 'Pelle', 'Ca creuse bien!', 10, 1);
 
 INSERT INTO "category" VALUES
-("Nourriture", "Tout ce qui se mange", NULL),
-("Outils", "Ici on bricole", NULL);
+('Nourriture', 'Tout ce qui se mange', NULL),
+('Outils', 'Ici on bricole', NULL);
 
 INSERT INTO "delivery_system" VALUES
-(1, "Transport par FaidecsShip", 10);
+(1, 'Transport par FaidecsShip', 10);
 
 INSERT INTO "product_category" VALUES
-(1, "Nourriture"),
-(2, "Outils");
+(1, 'Nourriture'),
+(2, 'Outils');
