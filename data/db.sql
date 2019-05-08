@@ -135,6 +135,20 @@ INSERT INTO "planet" VALUES
 INSERT INTO "product" VALUES
 (1, 2, 'Tarte', 'On aime le sucre', 3.14, 10),
 (2, 1, 'Pelle', 'Ca creuse bien!', 10, 1);
+(3, 3, 'Ordinateur', 'HP 5 ans', 3.14, 5),
+(4, 1, 'Samsung', 'Modèle S8', 10, 6);
+(5, 2, 'Ipad', 'Modèle 4G', 3.14, 14),
+(6, 5, 'Bananes', 'Fraiches de Madagascar', 10, 5);
+(7, 9, 'TV', '3D inclus', 3.14, 100),
+(8, 1, 'Colle', 'A utiliser pour coller', 10, 23);
+(9, 1, 'Avion de chasse','Fonctionne bien', 3.14, 43),
+(10, 2, 'Millenium Faulcon', 'Toujours en bon état', 10, 1);
+(11, 2, 'Sabre laser', 'En rouge', 3.14, 10),
+(12, 1, 'Frites', 'Avec ketchup', 10, 13);
+(13, 2, 'Diamant', 'Très joli', 3.14, 14),
+(14, 1, 'Or', 'Encore joli', 10, 12);
+(15, 2, 'Maillot de bain', 'Pour nager', 3.14, 140),
+(16, 1, 'Sirop de menthe', 'A boire', 10, 13);
 
 INSERT INTO "category" VALUES
 ('Nourriture', 'Tout ce qui se mange', NULL),
