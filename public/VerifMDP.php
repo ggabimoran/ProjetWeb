@@ -14,6 +14,7 @@ $dbName = getenv('DB_NAME');
 
   $password = $userRepository->getPassword($psd);  
   if($password == $mdp) {
+      $CONNECTED=1;
   	header('Location: index.php');
   }
 enTete('Vérification du mot de passe');
