@@ -13,58 +13,7 @@ DROP TABLE IF EXISTS"purchase" CASCADE;
 \i data/countries.sql;
 \i data/states.sql;
 \i data/cities.sql;
-
-
-CREATE TABLE "user" (
-	id SERIAL PRIMARY KEY,
-	pseudo VARCHAR UNIQUE,
-	password VARCHAR NOT NULL,
-	address VARCHAR NOT NULL,
-	city_id INTEGER NOT NULL 
-    FOREIGN KEY (city_id) REFERENCES city(id)
-);
-
-
-CREATE TABLE "product" (
-	id SERIAL PRIMARY KEY,
-	seller_id INTEGER NOT NULL 
-	name VARCHAR NOT NULL,
-	description TEXT,
-	price FLOAT,
-	FOREIGN KEY (seller_id) REFERENCES user(id)
-);
-
-CREATE TABLE "image" (
-	id SERIAL PRIMARY KEY,
-	path VARCHAR NOT NULL,
-);
-
-CREATE TABLE "category" (
-	name VARCHAR PRIMARY KEY,
-);
-
-CREATE TABLE "delivery_system" (
-	id SERIAL PRIMARY KEY,
-	description TEXT,
-	price FLOAT NOT NULL
-);	
-
-
-CREATE TABLE "product_category" (
-	product_id INTEGER,
-	category_name VARCHAR,
-	PRIMARY KEY(product_id, category_name),
-    FOREIGN KEY (product_id) REFERENCES product(id),
-    FOREIGN KEY (category_name) REFERENCES category(name)
-);
-
-CREATE TABLE "product_image" (
-	product_id INTEGER,
-	image_id INTEGER,
-	PRIMARY KEY(product_id, image_id),
-    FOREIGN KEY (product_id) REFERENCES product(id),
-    FOREIGN KEY (image_id) REFERENCES image(id)
-);
+\i data/users.sql;
 
 CREATE TABLE "purchase" (
 	product_id INTEGER,
@@ -77,10 +26,6 @@ CREATE TABLE "purchase" (
     FOREIGN KEY (delivery_system_id) REFERENCES delivery_system(id)
 );
 
-
-INSERT INTO "user" VALUES
-(1, 'Toto', 'mdp', '30 Ruelle du Pingouin', '1', 'First'),
-(2, 'Jean-Eude', 'Argent', '5 Faubourg de la Cathédrale', '2', 'Je suis riche');
 
 INSERT INTO product VALUES
 (1, 2, 'Tarte', 'On aime le sucre', 3.14, 10),
