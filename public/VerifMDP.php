@@ -8,7 +8,7 @@ $mdp = $_POST['mdp']; //mot de passe
 
 if(getPassword($psd, $mdp)){
   $GLOBALS['AUTHENT'] = 1;
-  header('Location: connect_index.php');
+  header('Location: index.php');
 }
 enTete('Vérification du mot de passe');
 
