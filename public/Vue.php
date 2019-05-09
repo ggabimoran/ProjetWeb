@@ -39,7 +39,7 @@ function retour_menu()
     }
     echo '<p></p>';
 	if ($actual_link != "http://localhost:8080/Quitter.php"){
-	echo '<a href="Quitter.php">Déconnexion</a>';
+	echo '<a href="Quitter.php">Quitter</a>';
 	}
 }
 
@@ -77,6 +77,16 @@ function vue_lieu() {
 
 }
 
+$GLOBALS['AUTHENT'] = 0;
+
+function connexion_link() {
+    if ($GLOBALS['AUTHENT'] == 0){
+        echo '<a href=Connexion.php>Connexion</a>';
+    }
+    else{
+        echo '<a href=index.php>Déconnexion</a>';
+    }
+}
 
 
 
