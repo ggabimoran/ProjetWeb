@@ -118,9 +118,7 @@ function enTete2($titre)
              <div class="page-content">
              </div>
 
-        </div>
-
-                <header>';
+        </div>';
 
 
     echo '<h1>'.$titre.'</h1>';
