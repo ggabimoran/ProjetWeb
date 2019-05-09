@@ -15,6 +15,118 @@ function enTete($titre)
     print "    <header><h1> $titre </h1></header>\n";
 }
 
+
+
+function enTete2($titre)
+{
+        $current_page = basename($_SERVER['SCRIPT_FILENAME']);
+
+    echo '<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>'.$titre.'</title>
+            <link rel="icon" href="good.ico" type="image/x-icon" />
+            <meta name="theme-color" content="#3F51B5">
+            <link rel="stylesheet" type="text/css" href="main.css">
+            <link rel="stylesheet" type="text/css" href="navbar.css">
+            <link rel="stylesheet" type="text/css" href="page.css">
+            <link rel="stylesheet" type="text/css" href="sidebar.css">
+            <link rel="stylesheet" type="text/css" href="aside.css">
+        </head>
+
+        <body>
+
+           <nav class="nav navbar">
+             <div class="prompt">
+                <i class="prompt-logo fa fa-search navbar-search-logo"></i>
+                <input class="prompt-input" type="text" placeholder="Rechercher..."/>
+             </div>
+           </nav>
+
+        <section class="sidebar">
+
+            <img class="sidebar-logo" src="./images/logo2.png" />
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Menu</div>
+                <div class="sidebar-section-item"><i class="fa fa-home"></i>Accueil</div>
+            </div>
+
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Classification</div>
+                <div class="sidebar-section-item"><img src="./images/lol.png"/>Nourriture</div>
+                <div class="sidebar-section-item"><img src="./images/fortnite.png"/></i>Quotidiennes</div>
+                <div class="sidebar-section-item"><img src="./images/hs.png"/></i>Électroniques</div>
+                <div class="sidebar-section-item"><img src="./images/csgo.png"/></i>Cuisine</div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">A propos de nous</div>
+                <div class="sidebar-section-item"><i class="fa fa-users"></i>L\'équipe</div>
+                <div class="sidebar-section-item"><i class="fa fa-book"></i>Notre politque</div>
+                <div class="sidebar-section-item"><i class="fa fa-gavel"></i>Contribuer</div>
+                <div class="sidebar-section-item"></div>
+            </div>
+        </section>
+
+                <section class="aside">
+
+            <form class="aside-login-form" action="connect.php" method="post">>
+
+
+                <div id="email" class="prompt">
+                    <i class="prompt-logo fa fa-envelope navbar-search-logo"></i>
+                    <input class="prompt-input" name="email" type="text" placeholder="Adresse mail..."/>
+                </div>
+
+                <div id="pseudo" class="prompt">
+                    <i class="prompt-logo fa fa-user navbar-search-logo"></i>
+                    <input class="prompt-input" name="psd" type="text" placeholder="Pseudo..."/>
+                </div>
+
+                <div id="pass" class="prompt">
+                    <i class="prompt-logo fa fa-lock navbar-search-logo"></i>
+                    <input class="prompt-input" name="mdp" type="password" placeholder="Mot de passe..."/>
+                </div>
+
+
+                <div id="pass_confirm" class="prompt">
+                    <i class="prompt-logo fa fa-lock navbar-search-logo"></i>
+                    <input class="prompt-input" name="cmdp" type="password" placeholder="Confirmer..."/>
+                </div>
+
+                <div class="aside-login-labels">
+                    <a class="label label-button" name="conneter" onclick="switchView(false);">Se connecter</a>
+                    <span class="label"> | </span>
+                    <a class="label label-button" name="ensegistrer" onclick="switchView(true);">S\'enregistrer</a>
+                </div>
+
+
+                <iframe
+                    class="aside-discord"
+                    src="https://discordapp.com/widget?id=432533096609480704&theme=dark"
+                    allowtransparency="true"
+                    frameborder="0">
+                </iframe>
+
+
+             <canvas class="page-background" id="bgCanvasID"></canvas>
+        <div class="page">
+             <div class="page-content">
+             </div>
+
+        </div>
+
+                <header>';
+
+
+    echo '<h1>'.$titre.'</h1>';
+
+}
+
+
 function pied(){
   echo '</body></html>';
 }
