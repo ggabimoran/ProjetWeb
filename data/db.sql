@@ -15,8 +15,9 @@ CREATE TABLE "user" (
 	pseudo VARCHAR UNIQUE,
 	password VARCHAR NOT NULL,
 	address VARCHAR NOT NULL,
-	city_id INTEGER NOT NULL REFERENCES city(id),
-	description TEXT
+	city_id INTEGER NOT NULL,
+	description TEXT,
+    FOREIGN KEY (city_id) REFERENCES city(id)
 );
 
 /*********
@@ -25,7 +26,8 @@ CREATE TABLE "user" (
 CREATE TABLE "city" (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR NOT NULL,
-	planet_id INTEGER NOT NULL REFERENCES planet(id)
+	planet_id INTEGER NOT NULL,
+    FOREIGN KEY (planet_id) REFERENCES planet(id)
 );
 
 CREATE TABLE "planet" (
