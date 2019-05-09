@@ -73,7 +73,7 @@ function enTete2($titre)
 
                 <section class="aside">
 
-            <form class="aside-login-form" action="connect.php" method="post">>
+            <form class="aside-login-form" action="AccountCreation.php" method="post">>
 
 
                 <div id="email" class="prompt">
@@ -102,7 +102,8 @@ function enTete2($titre)
                     <span class="label"> | </span>
                     <a class="label label-button" name="ensegistrer" onclick="switchView(true);">S\'enregistrer</a>
                 </div>
-
+                <input type="submit" value="S\'enregistrer"/>
+                </form>
 
                 <iframe
                     class="aside-discord"
