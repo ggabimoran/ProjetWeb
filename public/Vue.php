@@ -1,4 +1,5 @@
 <?php
+//include("Modele.php");
 
 function enTete($titre)
 {
@@ -9,13 +10,13 @@ function enTete($titre)
     print "    <title>$titre</title>\n";
     print "    <link rel=\"stylesheet\" href=\"Style.css\"/>\n";
     print "  </head>\n";
-  
+    
     print "  <body>\n";
     print "    <header><h1> $titre </h1></header>\n";
 }
 
 function pied(){
-	 echo '</body></html>';
+  echo '</body></html>';
 }
 
 function affiche($str) {
@@ -33,51 +34,49 @@ function affiche_erreur($str) {
 
 function retour_menu() 
 { 
-        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-	if ($actual_link != "http://localhost:8080/index.php"){
-	echo '<a href="index.php">Menu</a>';
-    }
-    echo '<p></p>';
-	if ($actual_link != "http://localhost:8080/Quitter.php"){
-	echo '<a href="Quitter.php">Quitter</a>';
-	}
+    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    if ($actual_link != "http://localhost:8080/index.php"){
+       echo '<a href="index.php">Menu</a>';
+   }
+   echo '<p></p>';
+   if ($actual_link != "http://localhost:8080/Quitter.php"){
+       echo '<a href="Quitter.php">Quitter</a>';
+   }
 }
 
 function vue_connexion() {
 
     echo '<section>
-        <p> Bonjour, bienvenue sur l\'application de gestion des transactions intergalactiques de gré à gré.
-        Commencez par vous authentifier </p>
+    <p> Bonjour, bienvenue sur l\'application de gestion des transactions intergalactiques de gré à gré.
+    Commencez par vous authentifier </p>
 
-        <br/>
+    <br/>
 
-        <form action="VerifMDP.php" method="post">
-	    <label>Entrez votre pseudo :</label> <input type="pseudo" name="psd" size="8"/><br/>
-            <label>Entrez votre mot de passe :</label> <input type="password" name="mdp" size="8"/><br/>
-            <input type="submit" value="Valider"/>
-        </form>
-        </section>';
+    <form action="VerifMDP.php" method="post">
+    <label>Entrez votre pseudo :</label> <input type="pseudo" name="psd" size="8"/><br/>
+    <label>Entrez votre mot de passe :</label> <input type="password" name="mdp" size="8"/><br/>
+    <input type="submit" value="Valider"/>
+    </form>
+    </section>';
 
 }
 
 function vue_lieu() {
 
     echo '<section>
-        <p> Bonjour, bienvenue sur l\'application de gestion des transactions intergalactiques de gré à gré.
-        Commencez par indiquer votre lieu </p>
+    <p> Bonjour, bienvenue sur l\'application de gestion des transactions intergalactiques de gré à gré.
+    Commencez par indiquer votre lieu </p>
 
-        <br/>
+    <br/>
 
-        <form action="Annonces.php" method="post">
-	    <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
-            <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
-            <input type="submit" value="Valider"/>
-        </form>
-        </section>';
+    <form action="Annonces.php" method="post">
+    <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
+    <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
+    <input type="submit" value="Valider"/>
+    </form>
+    </section>';
 
 }
-
-$GLOBALS['AUTHENT'] = 0;
 
 function connexion_link() {
     if ($GLOBALS['AUTHENT'] == 0){
@@ -86,6 +85,7 @@ function connexion_link() {
     else{
         echo '<a href=index.php>Déconnexion</a>';
     }
+    //echo $GLOBALS['AUTHENT'];
 }
 
 
