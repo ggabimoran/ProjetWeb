@@ -3,7 +3,7 @@ CREATE TABLE "users" (
 	pseudo VARCHAR NOT NULL,
 	password VARCHAR NOT NULL,
 	city_id INTEGER NOT NULL 
-    FOREIGN KEY (city_id) REFERENCES city(id)
+    FOREIGN KEY (city_id) REFERENCES cities(id)
 );
 
 INSERT INTO customers VALUES 
