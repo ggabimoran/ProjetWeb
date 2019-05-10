@@ -5,7 +5,7 @@ function verif_authent() {
     $GLOBALS['AUTHENT'] = 0;
 }
 
-function getPassword($psd, $mdp){
+function verifie_Password($psd, $mdp){
 	$dbName = getenv('DB_NAME');
 	$dbUser = getenv('DB_USER');
 	$dbPassword = getenv('DB_PASSWORD');

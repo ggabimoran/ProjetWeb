@@ -4,7 +4,7 @@ include 'Vue.php';
 include("Modele.php");
 
 verif_authent();
-enTete2("Selectionnez votre lieu.");
+enTete("Selectionnez votre lieu.");
 vue_lieu();
 retour_menu();
 echo '<p></p>';

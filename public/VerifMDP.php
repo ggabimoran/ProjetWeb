@@ -6,7 +6,7 @@ include("Modele.php");
 $psd = $_POST['psd']; //pseudo 
 $mdp = $_POST['mdp']; //mot de passe
 
-if(getPassword($psd, $mdp)){
+if(verifie_Password($psd, $mdp)){
   $GLOBALS['AUTHENT'] = 1;
   header('Location: index.php');
 }
