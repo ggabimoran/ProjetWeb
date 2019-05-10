@@ -1,6 +1,6 @@
 CREATE TABLE "product" (
 	id SERIAL PRIMARY KEY,
-	seller_id INTEGER NOT NULL 
+	seller_id INTEGER NOT NULL, 
 	name VARCHAR NOT NULL,
 	description TEXT,
 	price FLOAT,
@@ -9,12 +9,12 @@ CREATE TABLE "product" (
 
 CREATE TABLE "image" (
 	id SERIAL PRIMARY KEY,
-	path VARCHAR NOT NULL,
+	path VARCHAR NOT NULL
 );
 
 CREATE TABLE "supercategory"(
-    name VARCHAR PRIMARY KEY,
-)
+    name VARCHAR PRIMARY KEY
+);
 
 CREATE TABLE "category" (
 	name VARCHAR PRIMARY KEY,
@@ -27,7 +27,7 @@ CREATE TABLE "product_category" (
 	product_id INTEGER,
 	category_name VARCHAR,
 	PRIMARY KEY(product_id, category_name),
-    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (product_id) REFERENCES product(id),
     FOREIGN KEY (category_name) REFERENCES category(name)
 );
 
@@ -35,7 +35,7 @@ CREATE TABLE "product_image" (
 	product_id INTEGER,
 	image_id INTEGER,
 	PRIMARY KEY(product_id, image_id),
-    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (product_id) REFERENCES product(id),
     FOREIGN KEY (image_id) REFERENCES image(id)
 );
 
@@ -47,11 +47,11 @@ INSERT INTO product VALUES
 (5,2,'sac gucci','cuir',50.0);
 
 INSERT INTO image VALUES
-(1,data/pictures/bottines.jpg),
-(2,data/pictures/canape.jpg),
-(3,data/pictures/megane.jpg),
-(4,data/pictures/napperon.jpg),
-(5,data/pictures/sac_gucci.jpg);
+(1,'data/pictures/bottines.jpg'),
+(2,'data/pictures/canape.jpg'),
+(3,'data/pictures/megane.jpg'),
+(4,'data/pictures/napperon.jpg'),
+(5,'data/pictures/sac_gucci.jpg');
 
 INSERT INTO product_image VALUES
 (1,1),

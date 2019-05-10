@@ -3,8 +3,8 @@ CREATE TABLE "purchase" (
 	buyer_id INTEGER,
 	pdate DATE,
 	PRIMARY KEY(product_id, buyer_id, pdate),
-    FOREIGN KEY (product_id) REFERENCES products(id),
-    FOREIGN KEY (buyer_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES product(id),
+    FOREIGN KEY (buyer_id) REFERENCES users(id)
 );
 
 INSERT INTO purchase VALUES
