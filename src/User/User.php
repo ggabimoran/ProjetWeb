@@ -140,5 +140,15 @@ class User
         return $this;
     }
 
+    public function setCityId($city_id)
+    {
+        $this->city_id = $city_id;
+        return $this;
+    }
+
+    public function getCityId(){
+        return city_id;
+    }
+
 }
 

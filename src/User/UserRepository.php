@@ -23,13 +23,13 @@ class UserRepository
         foreach ($rows as $row) {
             $user = new User();
             $user
-                ->setId($row->id)
-                ->setPseudo($row->pseudo)
-                ->setPassword($row->password)  
-                ->setAddress($row->address)
-                ->setCityId($row->city_id)
-                ->setDescription($row->description);
-                
+            ->setId($row->id)
+            ->setPseudo($row->pseudo)
+            ->setPassword($row->password)  
+            ->setAddress($row->address)
+            ->setCityId($row->city_id)
+            ->setDescription($row->description);
+
             $users[] = $user;
         }
 
@@ -40,12 +40,27 @@ class UserRepository
         $rows = $this->connection->query('SELECT * FROM "user"')->fetchAll(\PDO::FETCH_OBJ);
         foreach ($rows as $row){
             if($row->pseudo == $pseudo)
-            return $row->password;
+                return $row->password;
         }
     }
 
-    public insert($psd, $mdp, $city_id){
-        return $rows = $this->connection->query('INSERT INTO users VALUES(default,$psd, $mdp, $city_id)');
+    public function insert($psd, $mdp, $city_id){
+        return $rows = $this->connection->query('INSERT INTO users VALUES(default,{$psd}, {$mdp}, {$city_id})');
     }
 
-}
+    public function getUser($psd){
+       $rows = $this->connection->query('SELECT * FROM "user" WHERE pseudo = {$psd}')->fetchAll(\PDO::FETCH_OBJ);
+       foreach ($rows as $row){
+           $user = new User();
+           $user
+           ->setId($row->id)
+           ->setPseudo($row->pseudo)
+           ->setPassword($row->password)  
+           ->setAddress($row->address)
+           ->setCityId($row->city_id)
+           ->setDescription($row->description);
+
+           $users[] = $user;        }
+       }
+       return $users;
+   }
