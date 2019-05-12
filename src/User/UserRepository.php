@@ -44,4 +44,8 @@ class UserRepository
         }
     }
 
+    public insert($psd, $mdp, $city_id){
+        return $rows = $this->connection->query('INSERT INTO users VALUES(default,$psd, $mdp, $city_id)');
+    }
+
 }
