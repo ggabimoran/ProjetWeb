@@ -5,8 +5,6 @@ $psd = $_POST['psd']; //pseudo
 $mdp = $_POST['mdp']; //mot de passe
 $city_id = $_POST['city_id']; //pseudo 
 
-$a = account_creation($psd, $mdp, $city_id);
-echo $a;
 if(account_creation($psd, $mdp, $city_id)){
   $GLOBALS['AUTHENT'] = 1;
   header('Location: index.php');

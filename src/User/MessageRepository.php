@@ -36,15 +36,19 @@ class MessageRepository
 
     public function getMessage($id_sender)
     {
-        $rows = $this->connection->query('SELECT * FROM "message" WHERE sender = {$id_sender}')->fetchAll(\PDO::FETCH_OBJ);
-        $messages = [];
+        $rows = $this->connection->query('SELECT * FROM "messages"')->fetchAll(\PDO::FETCH_OBJ);
+        $results = [];
         foreach ($rows as $row) {
+            if($row->sender == $id_sender)
+                $resuls[] = $row;
+        }
+        $messages = [];
+        foreach ($results as $result) {
             $message = new Message();
             $message
-                ->setIdSender($row->sender)
-                ->setIdReceiver($row->receiver)
-                ->setMessage($row->message);
-                
+                ->setIdSender($result->sender)
+                ->setIdReceiver($result->receiver)
+                ->setMessage($result->message);
             $messages[] = $message;
         }
 

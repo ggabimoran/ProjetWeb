@@ -44,11 +44,14 @@ class UserRepository
     }
 
     public function insert($psd, $mdp, $city_id){
-        return $rows = $this->connection->query('INSERT INTO "users"(pseudo, password,city_id) VALUES(\'".$psd."\', \'".$mdp."\', \'".$city_id."\');');
+        /*return $this->connection->query('INSERT INTO "users" VALUES(default, \'\'.$psd.\'\', \'\'.$mdp.\'\', \'.$city_id.\');');*/
+        $id = $this->connection->query("SELECT setval(pg_get_serial_sequence('users', 'id'), coalesce(max(id),1), false) FROM users;");
+
+        return $this->connection->query("INSERT INTO users VALUES(17,'".$psd."','".$mdp."',".$city_id.");");
     }
 
     public function getUser($psd){
-       $rows = $this->connection->query('SELECT * FROM "users" WHERE pseudo = \'".$psd."\';')->fetchAll(\PDO::FETCH_OBJ);
+       $rows = $this->connection->query("SELECT * FROM \"users\" WHERE pseudo = '".$psd."';")->fetchAll(\PDO::FETCH_OBJ);
        $users = [];
        foreach ($rows as $row){
            $user = new User();

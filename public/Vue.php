@@ -39,7 +39,7 @@ function enTete($titre)
           <div class="footer">
             <h3 class="footer-header">My Account</h3>
             <ul class="list-links">
-              <li><a href="#">My Account</a></li>
+              <li><a href=info_perso.php>My Account</a></li>
               <li><a href="#">Checkout</a></li>
               <li><a href="#">Login</a></li>
             </ul>
@@ -77,7 +77,7 @@ function enTete($titre)
       </div>
       <hr>
     </div>
-  </footer> '
+  </footer> ';
     print "  </head>\n";
 
     print "  <body>\n";
@@ -94,7 +94,7 @@ function enTete2($titre)
     <html>
     <head>
     <meta charset="utf-8" />
-    <title>'.$titre.'</title>
+    <title>\'.$titre.\'</title>
     <link rel="icon" href="good.ico" type="image/x-icon" />
     <meta name="theme-color" content="#3F51B5">
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -418,19 +418,16 @@ function vue_info_perso($user, $message){
     <td>message</td>
 
     </thead>
-    <?php /** @var \User\User $user */
-    foreach ($users as $user) : ?>
     <tr>
-    <td><?php echo $user->getId() ?></td>
-    <td><?php echo $user->getPseudo() ?></td>
-    <td><?php echo $user->getCityId() ?></td>
-    <td><?php echo $message->getSender() ?></td>
-    <td><?php echo $message->getReciver() ?></td>
-    <td><?php echo $message->getPDate() ?></td>
-    <td><?php echo $message->getMessage() ?></td>
+    <td>'.$user->getId().'</td>
+    <td>'.$user->getPseudo().'</td>
+    <td>'.$user->getCityId().'</td>
+    <td>'.$message->getSender().'</td>
+    <td>'.$message->getReciver().'</td>
+    <td>'.$message->getPDate().'</td>
+    <td>'.$message->getMessage().'</td>
 
     </tr>
-    <?php endforeach; ?>
     </table>
     </div>
 

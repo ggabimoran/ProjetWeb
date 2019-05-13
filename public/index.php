@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 include 'Vue.php';
-include 'utils.js'
+include './js/utils.js';
 include("Modele.php");
 
 verif_authent();

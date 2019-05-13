@@ -42,7 +42,7 @@ function search_info_message($id_sender){
 	$dbUser = getenv('DB_USER');
 	$dbPassword = getenv('DB_PASSWORD');
 	$connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=$dbPassword");
-	$userRepository = new \User\UserRepository($connection);
+	$MessageRepository = new \User\MessageRepository($connection);
 
 	return $MessageRepository->getMessage($id_sender);
 }
