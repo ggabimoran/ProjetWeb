@@ -1,17 +1,18 @@
 <?php
 include("Modele.php");
 include("Vue.php");
-include("../src/User/User.php")
-include("../src/User/UserRepository.php")
-include("../src/User/Message.php")
-include("../src/User/MessageRepository.php")
+include("../src/User/User.php");
+
 
 $psd = $_POST['psd']; //pseudo 
 
-$user = search_info_perso($psd);
+$users = search_info_perso($psd);
+echo $user;
+foreach ($users as $user)
 $message = search_info_message($user->getId());
-enTete('Infomation of user id: {$psd}');
-vue_info_perso($use, $message)
+echo $user;
+enTete('Infomation of user id: \'".$psd."\'');
+vue_info_perso($user, $message);
 
 
 retour_menu();

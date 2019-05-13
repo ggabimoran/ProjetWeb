@@ -2,7 +2,7 @@
 include 'Vue.php';
 
 enTete("Infomation.");
-vue_creation();
+vue_infomation();
 retour_menu();
 pied();
 ?>

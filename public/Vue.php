@@ -271,7 +271,7 @@ function vue_info_perso($user, $message){
 
     <footer>
     <p>Informations complémentaires :</p>
-    </footer>'
+    </footer>';
 }
 
 
