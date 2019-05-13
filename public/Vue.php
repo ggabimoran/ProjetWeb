@@ -199,12 +199,6 @@ function enTete2($titre)
     <i class="prompt-logo fa fa-lock navbar-search-logo"></i>
     <input class="prompt-input" name="cmdp" type="password" placeholder="Confirmer..."/>
     </div>
-
-    <div class="aside-login-labels">
-    <a class="label label-button" name="conneter" onclick="switchView(false);">Se connecter</a>
-    <span class="label"> | </span>
-    <a class="label label-button" name="ensegistrer" onclick="switchView(true);">S\'enregistrer</a>
-    </div>
     <input type="submit" value="S\'enregistrer"/>
     </form>
 
@@ -354,8 +348,8 @@ function vue_lieu() {
     <br/>
 
     <form action="Annonces.php" method="post">
-    <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
-    <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
+    <label>Entrez votre Ville :</label> <input type="planet" name="plt" size="8"/><br/>
+    <label>Entrez catégorie (Facultatif):</label> <input type="city" name="cty" size="8"/><br/>
     <input type="submit" value="Valider"/>
     </form>
     </section>';
