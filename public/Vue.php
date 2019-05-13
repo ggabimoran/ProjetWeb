@@ -226,7 +226,7 @@ echo '<section class="aside" style="padding-right:0px">
   </div>
   <hr>
   </div>
-  </footer>'
+  </footer>';
 
 }
 
@@ -242,9 +242,6 @@ function connexion_link() {
   }
 }
 
-function pied(){
-  echo '</body></html>';
-}
 
 function affiche($str) {
   echo $str;
