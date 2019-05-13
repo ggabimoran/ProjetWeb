@@ -7,10 +7,12 @@ html {
 }
 
 body {
-
-
-    font-family: Arial, Helvetica, sans-serif
+  font-family: 'Hind', sans-serif;
+  color: #4A4E5A;
+  overflow-x: hidden;
 }
+
+hr { margin-top: 15px; margin-bottom: 15px; border-color: #DADADA; }
 
 /** un bouton */
 .button {

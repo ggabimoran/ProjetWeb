@@ -1,14 +1,11 @@
 
-body {
-  font-family: 'Hind', sans-serif;
-  color: #4A4E5A;
-  overflow-x: hidden;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #30323A;
   margin: 0 0 10px;
   font-weight: 700;
+  padding-left : 100px;
 }
 
 a {
@@ -17,7 +14,7 @@ a {
   transition: 0.3s color;
 }
 .container{
-    table-layout: auto;
+    table-layout: fixed;
     border:black;
 }
 
