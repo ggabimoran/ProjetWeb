@@ -97,11 +97,11 @@ function enTete2($titre)
     <title>\'.$titre.\'</title>
     <link rel="icon" href="good.ico" type="image/x-icon" />
     <meta name="theme-color" content="#3F51B5">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="page.css">
-    <link rel="stylesheet" type="text/css" href="sidebar.css">
-    <link rel="stylesheet" type="text/css" href="aside.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/aside.css">
     </head>
 
     <body>
