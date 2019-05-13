@@ -8,7 +8,7 @@ function enTete($titre)
     <html>
      <head>
     <meta charset=\"utf-8\"
-    <title>$titre</title>
+    <title>'.$titre.'</title>
      <link rel=\"stylesheet\" href=\"Style.css\"/>
 
 
