@@ -9,75 +9,10 @@ function enTete($titre)
      <head>
     <meta charset=\"utf-8\"
     <title>'.$titre.'</title>
-     <link rel=\"stylesheet\" href=\"Style.css\"/>
+     <link rel=\"stylesheet\" href=\"Style.css\"/>';
 
 
-   <footer id="footer" class="section section-grey">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-6">
-          <div class="footer">
-            <div class="footer-logo">
-              <a class="logo" href="#">
-                <img src="./img/logo.png" alt="">
-              </a>
-            </div>
-
-            <p>Make the deal easier</p>
-
-            <ul class="footer-social">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-6">
-          <div class="footer">
-            <h3 class="footer-header">My Account</h3>
-            <ul class="list-links">
-              <li><a href=info_perso.php>My Account</a></li>
-              <li><a href="#">Checkout</a></li>
-              <li><a href="#">Login</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="clearfix visible-sm visible-xs"></div>
-
-
-        <div class="col-md-3 col-sm-6 col-xs-6">
-          <div class="footer">
-            <h3 class="footer-header">Customer Service</h3>
-            <ul class="list-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Shiping & Return</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-
-
-
-        <div class="col-md-3 col-sm-6 col-xs-6">
-          <div class="footer">
-            <h3 class="footer-header">Stay Connected</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-            <form>
-              <div class="form-group">
-                <input class="input" placeholder="Enter Email Address">
-              </div>
-              <button class="primary-btn">Join Newslatter</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <hr>
-    </div>
-  </footer> ';
+   
     print "  </head>\n";
 
     print "  <body>\n";
@@ -104,7 +39,7 @@ function enTete2($titre)
     <link rel="stylesheet" type="text/css" href="css/aside.css">
     </head>
 
-    <body style="padding-left : 100px">
+    <body = style="padding-left:185px;color:orange;padding-right:185px">
 
     <nav class="nav navbar">
     <div class="prompt">
@@ -114,7 +49,7 @@ function enTete2($titre)
     </nav>
 
 
-   <div id="home" style="padding-left : 100px;background-color : blue;">
+   <div id="home">
    <div class="container">
    <div class="home-wrap">
     <div id="home-slick">
@@ -135,7 +70,7 @@ function enTete2($titre)
           </div>
 
           <div class="banner banner-1">
-            <img src="./img/banner03.jpg" alt="">
+            <img src="img/banner03.jpg" alt="">
             <div class="banner-caption">
               <h1 class="white-color">New Product <span>Collection</span></h1>
               <button class="primary-btn">Shop Now</button>
@@ -172,9 +107,18 @@ function enTete2($titre)
     <div class="sidebar-section-item"><i class="fa fa-gavel"></i>Contribuer</div>
     <div class="sidebar-section-item"></div>
     </div>
-    </section>
+    </section>';
 
-    <section class="aside">
+    
+
+
+    echo '<h1>'.$titre.'</h1>';
+
+}
+
+
+function pied(){
+echo '<section class="aside" style="padding-right:0px">
 
     <form class="aside-login-form" action="AccountCreation.php" method="post">>
 
@@ -284,14 +228,6 @@ function enTete2($titre)
   </footer>
 
     </div>';
-
-
-    echo '<h1>'.$titre.'</h1>';
-
-}
-
-
-function pied(){
   echo '</body></html>';
 }
 
