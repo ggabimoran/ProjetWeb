@@ -14,7 +14,7 @@ function verifie_Password($psd, $mdp){
 	$connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=$dbPassword");
 	$userRepository = new \User\UserRepository($connection);
 
-	return $mdp = $userRepository->getPassword($psd);
+	return $mdp == $userRepository->getPassword($psd);
 }
 
 function account_creation($psd, $mdp, $city_id){

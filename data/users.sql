@@ -22,7 +22,8 @@ INSERT INTO users VALUES
 (13,'Maurice','passwd',17272),
 (14,'Christophe','passwd',17272),
 (15,'Marcel','passwd',17272),
-(16,'Sébastien','passwd',17272);
+(16,'Sébastien','passwd',17272)
+(17,'1','2',17272);
 
 
 
