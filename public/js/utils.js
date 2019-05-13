@@ -11,3 +11,4 @@ function redirectToPage(page) {
 function redirect(domain) {
     window.location.replace(domain);
 }
+
