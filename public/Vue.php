@@ -104,7 +104,7 @@ function enTete2($titre)
     <link rel="stylesheet" type="text/css" href="css/aside.css">
     </head>
 
-    <body>
+    <body style="padding-left : 100px">
 
     <nav class="nav navbar">
     <div class="prompt">
@@ -114,7 +114,7 @@ function enTete2($titre)
     </nav>
 
 
-   <div id="home">
+   <div id="home" style="padding-left : 100px;background-color : blue;">
    <div class="container">
    <div class="home-wrap">
     <div id="home-slick">
