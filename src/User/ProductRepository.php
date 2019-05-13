@@ -36,6 +36,26 @@ class ProductRepository
 
         return $products;
     }
+    
+    public function fetchAll_cat()
+    {
+        $rows = $this->connection->query("SELECT * FROM product NATURAL JOIN product_category NATURAL JOIN category WHERE category=$category ")->fetchAll(\PDO::FETCH_OBJ);
+        $products = [];
+        foreach ($rows as $row) {
+            $product = new Product();
+            $product
+                ->setId($row->id)
+                ->setSellerId($row->seller_id)
+                ->setName($row->name)  
+                ->setPrice($row->price)
+                ->setNumber($row->number)
+                ->setDescription($row->description);
+                
+            $products[] = $product;
+        }
+
+        return $products;
+    }
 
 
 }

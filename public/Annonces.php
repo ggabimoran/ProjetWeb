@@ -4,8 +4,8 @@ include("../src/User/ProductRepository.php");
 include("../src/User/Product.php");
 
 
-$planet = $_POST['plt'];
-$city = $_POST['cty'];
+$city = $_POST['city'];
+$category = $_POST['category'];
 
 $dbName = getenv('DB_NAME');
 $dbUser = getenv('DB_USER');
@@ -14,7 +14,7 @@ $connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=
 
 $productRepository = new \User\ProductRepository($connection);
 $products = $productRepository->fetchAll();
-enTete2("Annonces dans la ville $city de la planète $planet");
+enTete2("Annonces dans la ville $city");
 
 ?>
 
