@@ -7,7 +7,7 @@ $psd = $_POST['psd']; //pseudo
 $mdp = $_POST['mdp']; //mot de passe
 
 if(verifie_Password($psd, $mdp)){
-	$GLOBALS['AUTHENT'] = 1;
+	config($psd, $mdp);
 	header('Location: index.php');
 }
 

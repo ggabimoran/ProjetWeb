@@ -1,18 +1,16 @@
 <?php
 require '../vendor/autoload.php';
 include 'Vue.php';
-include './js/utils.js';
 include("Modele.php");
 
-verif_authent();
+//verif_authent();
 enTete2("Selectionnez votre lieu.");
 vue_lieu();
+echo "string";
 retour_menu();
 echo '<p></p>';
 connexion_link();
 echo '<p></p>';
-
-
 create_account_link();
 
 pied();
