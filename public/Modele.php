@@ -18,7 +18,7 @@ function config($psd, $mdp) {
     $_SESSION['nomhote'] = $nom_hote;
     $_SESSION['nombase'] = $nom_base;
     $_SESSION['nomuser'] = $psd;
-    $_SESSION['mdp'] = $mdp;
+    $_SESSION['connect'] = 1;
 }
 
 
