@@ -243,7 +243,6 @@ function connexion_link() {
 }
 
 function pied(){
-    </div>';
   echo '</body></html>';
 }
 
