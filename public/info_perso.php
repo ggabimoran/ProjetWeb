@@ -1,7 +1,7 @@
 <?php
 include 'Vue.php';
 
-enTete("Infomation.");
+enTete2("Infomation.");
 vue_infomation();
 retour_menu();
 pied();
