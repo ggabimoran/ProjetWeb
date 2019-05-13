@@ -3,14 +3,83 @@
 
 function enTete($titre)
 {
-    print "<!DOCTYPE html>\n";
-    print "<html>\n";
-    print "  <head>\n";
-    print "    <meta charset=\"utf-8\" />\n";
-    print "    <title>$titre</title>\n";
-    print "    <link rel=\"stylesheet\" href=\"Style.css\"/>\n";
+      echo '
+    <!DOCTYPE html>
+    <html>
+     <head>
+    <meta charset=\"utf-8\"
+    <title>$titre</title>
+     <link rel=\"stylesheet\" href=\"Style.css\"/>
+
+
+   <footer id="footer" class="section section-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <div class="footer-logo">
+              <a class="logo" href="#">
+                <img src="./img/logo.png" alt="">
+              </a>
+            </div>
+
+            <p>Make the deal easier</p>
+
+            <ul class="footer-social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-header">My Account</h3>
+            <ul class="list-links">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="clearfix visible-sm visible-xs"></div>
+
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-header">Customer Service</h3>
+            <ul class="list-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shiping & Return</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-header">Stay Connected</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <form>
+              <div class="form-group">
+                <input class="input" placeholder="Enter Email Address">
+              </div>
+              <button class="primary-btn">Join Newslatter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </footer> '
     print "  </head>\n";
-    
+
     print "  <body>\n";
     print "    <header><h1> $titre </h1></header>\n";
 }
@@ -43,6 +112,40 @@ function enTete2($titre)
     <input class="prompt-input" type="text" placeholder="Rechercher..."/>
     </div>
     </nav>
+
+
+   <div id="home">
+   <div class="container">
+   <div class="home-wrap">
+    <div id="home-slick">
+          <div class="banner banner-1">
+            <img src="./img/banner01.jpg" alt="banner">
+            <div class="banner-caption text-center">
+              <h1>Bags sale</h1>
+              <h3 class="white-color font-weak">Up to 50% Discount</h3>
+              <button class="primary-btn">Shop Now</button>
+            </div>
+          </div>
+          <div class="banner banner-1">
+            <img src="./img/banner02.jpg" alt="banner">
+            <div class="banner-caption">
+              <h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
+              <button class="primary-btn">Shop Now</button>
+            </div>
+          </div>
+
+          <div class="banner banner-1">
+            <img src="./img/banner03.jpg" alt="">
+            <div class="banner-caption">
+              <h1 class="white-color">New Product <span>Collection</span></h1>
+              <button class="primary-btn">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <section class="sidebar">
 
@@ -118,6 +221,74 @@ function enTete2($titre)
     <div class="page-content">
     </div>
 
+  <footer id="footer" class="section section-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <div class="footer-logo">
+              <a class="logo" href="#">
+                <img src="./img/logo.png" alt="">
+              </a>
+            </div>
+
+
+            <p>Make the deal easier</p>
+
+            <ul class="footer-social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-header">My Account</h3>
+            <ul class="list-links">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="clearfix visible-sm visible-xs"></div>
+
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-header">Customer Service</h3>
+            <ul class="list-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shiping & Return</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div class="footer">
+            <h3 class="footer-header">Stay Connected</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <form>
+              <div class="form-group">
+                <input class="input" placeholder="Enter Email Address">
+              </div>
+              <button class="primary-btn">Join Newslatter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </footer>
+
     </div>';
 
 
@@ -143,8 +314,8 @@ function affiche_erreur($str) {
     echo '<p class="erreur">'.$str.'</p>';
 }
 
-function retour_menu() 
-{ 
+function retour_menu()
+{
     $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
     if ($actual_link != "http://localhost:8080/index.php"){
@@ -198,12 +369,11 @@ function connexion_link() {
     else{
         echo '<a href=index.php>Déconnexion</a>';
     }
-    //echo $GLOBALS['AUTHENT'];
+
 }
 
 function create_account_link() {
     echo '<a href=Creation.php>Create account</a>';
-    //echo $GLOBALS['AUTHENT'];
 }
 
 function vue_creation(){

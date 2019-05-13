@@ -2,6 +2,7 @@
 include("Vue.php");
 include("../src/User/ProductRepository.php");
 include("../src/User/Product.php");
+include 'utils.js'
 
 $planet = $_POST['plt'];
 $city = $_POST['cty'];
@@ -34,6 +35,9 @@ enTete2("Annonces dans la ville $city de la planète $planet");
         <?php endforeach; ?>
     </table>
 </div>
+
+
+
 
 <?php
 retour_menu();
