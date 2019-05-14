@@ -85,21 +85,22 @@ function enTete2($titre)
 
   <section class="sidebar">
 
-  <img class="sidebar-logo" src="./images/logo2.png" />
+  <img class="sidebar-logo" src="./img/logo.jpg" />
+  <p style="text-align:center">XCHANGE</p>
 
   <div class="sidebar-section">
   <div class="sidebar-section-title">Menu</div>
   <div class="sidebar-section-item"><i class="fa fa-home"></i>Accueil</div>
+  <div class="sidebar-section-item"><i class="fa fa-home"></i>Mon compte</div>
   </div>
 
 
-  <div class="sidebar-section">
+ <div class="sidebar-section">
   <div class="sidebar-section-title">Classification</div>
-  <div class="sidebar-section-item"><img src="./images/lol.png"/>Nourriture</div>
-  <div class="sidebar-section-item"><img src="./images/fortnite.png"/></i>Quotidiennes</div>
-  <div class="sidebar-section-item"><img src="./images/hs.png"/></i>Électroniques</div>
-  <div class="sidebar-section-item"><img src="./images/csgo.png"/></i>Cuisine</div>
-  </div>
+  <div class="sidebar-section-item"><img src="./img/clo.jpg"/>Clothing</div>
+  <div class="sidebar-section-item"><img src="./img/quo.png"/></i>Quotidiennes</div>
+  <div class="sidebar-section-item"><img src="./img/elec.png"/></i>Électroniques</div>
+ </div>
 
   <div class="sidebar-section">
   <div class="sidebar-section-title">A propos de nous</div>
@@ -234,14 +235,14 @@ function connexion_link() {
   global $AUTHENT;
   if($AUTHENT == 1){
     if(!$_SESSION['connect']){
-      echo '<a href=Connexion.php>Connexion</a>';
+      echo '<a href=Connexion.php><button>Connexion</button></a>';
     }
     else{
       if($_SESSION['connect'] == 0){
-        echo '<a href=Connexion.php>Connexion</a>';      
+        echo '<a href=Connexion.php><button>Connexion</button></a>';      
       }
       else{
-        echo '<a href=Deconnection.php>Déconnexion</a>';
+        echo '<a href=Deconnection.php><button>Déconnexion</button></a>';
       }
     }
   }
@@ -266,12 +267,12 @@ function retour_menu()
   $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
   if ($actual_link != "http://localhost:8080/index.php"){
-   echo '<a href="index.php">Menu</a>';
+   echo '<a href="index.php"><button>Menu</button></a>';
  }
 
  echo '<p></p>';
  if ($actual_link != "http://localhost:8080/Quitter.php"){
-  echo '<a href="Quitter.php">Quitter</a>';
+  echo '<a href="Quitter.php"><button>Quitter</button></a>';
 }
 }
 
@@ -301,8 +302,8 @@ function vue_lieu() {
   <br/>
 
   <form action="Annonces.php" method="post">
-  <label>Entrez votre planète :</label> <input type="planet" name="plt" size="8"/><br/>
-  <label>Entrez votre ville :</label> <input type="city" name="cty" size="8"/><br/>
+  <label>Entrez votre ville :</label> <input type="planet" name="plt" size="8"/><br/>
+  <label>Entrez votre categorie (facultatif) :</label> <input type="city" name="cty" size="8"/><br/>
   <input type="submit" value="Valider"/>
   </form>
   </section>';
@@ -311,7 +312,7 @@ function vue_lieu() {
 
 
 function create_account_link() {
-  echo '<a href=Creation.php>Create account</a>';
+  echo '<a href=Creation.php><button>Create account</button></a>';
 }
 
 function vue_creation(){
