@@ -9,7 +9,6 @@ function enTete($titre)
  <html>
  <head>
  <meta charset=\"utf-8\"
- <title>'.$titre.'</title>
  <link rel=\"stylesheet\" href=\"Style.css\"/>';
 
 
@@ -90,8 +89,8 @@ function enTete2($titre)
 
   <div class="sidebar-section">
   <div class="sidebar-section-title">Menu</div>
-  <div class="sidebar-section-item"><i class="fa fa-home"></i>Accueil</div>
-  <div class="sidebar-section-item"><i class="fa fa-home"></i>Mon compte</div>
+  <div class="sidebar-section-item"><i class="fa fa-home"></i><a href=Mon_compte.php>Mon compte</a></div>
+  <div class="sidebar-section-item"><i class="fa fa-home"></i><a href=info_perso.php>Search</a></div>
   </div>
 
 
@@ -120,19 +119,21 @@ function enTete2($titre)
 
 
 function pied(){
+
   echo '<section class="aside" style="padding-right:0px">
 
   <form class="aside-login-form" action="AccountCreation.php" method="post">>
 
 
-  <div id="email" class="prompt">
-  <i class="prompt-logo fa fa-envelope navbar-search-logo"></i>
-  <input class="prompt-input" name="email" type="text" placeholder="Adresse mail..."/>
-  </div>
 
   <div id="pseudo" class="prompt">
   <i class="prompt-logo fa fa-user navbar-search-logo"></i>
   <input class="prompt-input" name="psd" type="text" placeholder="Pseudo..."/>
+  </div>
+
+<div id="email" class="prompt">
+  <i class="prompt-logo fa fa-envelope navbar-search-logo"></i>
+  <input class="prompt-input" name="city_id" type="text" placeholder="City id..."/>
   </div>
 
   <div id="pass" class="prompt">
@@ -321,7 +322,7 @@ function vue_creation(){
 
  <br/>
 
- <form action="Account_Insert.php" method="post">
+ <form action="AccountCreation.php" method="post">
  <label>Entrez votre pseudo :</label> <input type="pseudo" name="psd" size="8"/><br/>
  <label>Entrez votre mot de passe :</label> <input type="password" name="mdp" size="8"/><br/>
  <label>Entrez votre city id :</label> <input type="city_id" name="city_id" size="8"/><br/>
