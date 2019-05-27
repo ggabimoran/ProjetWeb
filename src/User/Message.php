@@ -28,7 +28,7 @@ class Message
      * @var string
      */
     
-    public function getSender()
+    public function getIdSender()
     {
         return $this->id_sender;
     }
@@ -37,13 +37,13 @@ class Message
      * @param int $id
      * @return User
      */
-    public function setSender($id)
+    public function setIdSender($id)
     {
         $this->id_sender = $id;
         return $this;
     }
 
-    public function getReceiver()
+    public function getIdReceiver()
     {
         return $this->id_receiver;
     }
@@ -52,7 +52,7 @@ class Message
      * @param int $id
      * @return User
      */
-    public function setReceiver($id)
+    public function setIdReceiver($id)
     {
         $this->id_receiver = $id;
         return $this;
@@ -93,4 +93,4 @@ class Message
         return $this;
     }
 
-
+}

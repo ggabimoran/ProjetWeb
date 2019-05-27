@@ -1,11 +1,26 @@
 <?php
+session_start();
 include("../src/User/UserRepository.php");
 include("../src/User/MessageRepository.php");
+include("config.php");
 
-
+/* Fonction qui renvoie l'utilisateur sur la page de login si besoin */
 function verif_authent() {
-    $GLOBALS['AUTHENT'] = 0;
+    global $AUTHENT;
+
+    if($AUTHENT == 1)
+        if(!$_SESSION['nomuser'])
+            header('Location: Connexion.php');
 }
+
+function config($psd, $mdp) {
+    global $nom_hote, $nom_user, $nom_base;
+    $_SESSION['nomhote'] = $nom_hote;
+    $_SESSION['nombase'] = $nom_base;
+    $_SESSION['nomuser'] = $psd;
+    $_SESSION['connect'] = 1;
+}
+
 
 function verifie_Password($psd, $mdp){
 	$dbName = getenv('DB_NAME');
@@ -43,7 +58,6 @@ function search_info_message($id_sender){
 	$dbPassword = getenv('DB_PASSWORD');
 	$connection = new PDO("pgsql:host=postgres user=$dbUser dbname=$dbName password=$dbPassword");
 	$MessageRepository = new \User\MessageRepository($connection);
-
 	return $MessageRepository->getMessage($id_sender);
 }
 

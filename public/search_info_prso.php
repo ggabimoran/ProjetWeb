@@ -12,12 +12,9 @@ $psd = $_POST['psd']; //pseudo
 $users = search_info_perso($psd);
 
 foreach ($users as $user){
-
 	$messages = search_info_message($user->getId());
 	foreach($messages as $message){
-		echo $message->getSender();
 		vue_info_perso($user, $message);
-		echo $user->getId();
 	}
 }
 
@@ -25,5 +22,5 @@ foreach ($users as $user){
 
 
 retour_menu();
-pied();
+//pied();
 ?>
